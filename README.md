@@ -5,6 +5,7 @@ Demandware request tester
 
 ![analytics](https://analytics.gokaygurcan.com/UA-55204660-5/gokaygurcan/demandware.space.svg?style=flat-square)
 ![website](https://img.shields.io/website/https/demandware.space.svg?style=flat-square)
+![vulnerabilities](https://snyk.io/test/github/gokaygurcan/demandware.space/badge.svg?style=flat-square)
 ![travis ci](https://img.shields.io/travis/gokaygurcan/demandware.space.svg?style=flat-square)
 ![license](https://img.shields.io/github/license/gokaygurcan/demandware.space.svg?style=flat-square)
 
