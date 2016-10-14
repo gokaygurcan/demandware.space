@@ -3,8 +3,9 @@
 'use strict';
 
 const bodyParser = require('body-parser');
+const redisClient = require('redis').createClient();
 const express = require('express');
-const _ = require('lodash');
+const limiter = require('express-limiter');
 
 const app = express();
 
@@ -13,28 +14,31 @@ app.disable('x-powered-by');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.all('/*', (req, res) => {
-  let data = {};
+app.all('/*', limiter(app, redisClient)({
+  path: '/*',
+  method: 'all',
+  lookup: 'connection.remoteAddress',
+  total: 100,
+  expire: 1000 * 60 * 60,
+  onRateLimited: (req, res) => {
+    res.status(429).json({
+      message: 'Rate limit exceeded!',
+      status: 429
+    });
+  }
+}), (req, res) => {
+  res.status(200).json({
+    timestamp: Number(new Date()),
+    method: req.method,
+    headers: req.headers,
+    body: req.body,
+    qs: req.query,
+    authorization: (req.headers.authorization || {})
+  });
+});
 
-  // timestamp
-  _.assign(data, data, {timestamp: Number(new Date())});
-
-  // method
-  _.assign(data, data, {method: req.method});
-
-  // headers
-  _.assign(data, data, {headers: req.headers});
-
-  // body
-  _.assign(data, data, {body: req.body});
-
-  // querystring
-  _.assign(data, data, {qs: req.query});
-
-  // auth
-  _.assign(data, data, {authorization: req.headers.authorization || {}});
-
-  res.json(data);
+app.get('/favicon.ico', (req, res) => {
+  res.send(404); // no favicon, hooray!
 });
 
 app.listen(3977, () => {
