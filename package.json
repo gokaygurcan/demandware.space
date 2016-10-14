@@ -1,0 +1,42 @@
+{
+  "name": "demandware.space",
+  "version": "1.0.0",
+  "description": "Demandware request tester",
+  "homepage": "https://www.gokaygurcan.com/",
+  "private": true,
+  "author": {
+    "name": "Gökay Gürcan",
+    "email": "info@gokaygurcan.com",
+    "url": "https://www.gokaygurcan.com/"
+  },
+  "copyright": "2016",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gokaygurcan/demandware.space.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "/usr/local/bin/node index.js",
+    "test": "xo"
+  },
+  "keywords": [
+    "demandware",
+    "request",
+    "tester"
+  ],
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "lodash": "^4.16.4"
+  },
+  "devDependencies": {
+    "xo": "^0.17.0"
+  },
+  "xo": {
+    "space": 2,
+    "rules": {
+      "brace-style": 0
+    }
+  }
+}
