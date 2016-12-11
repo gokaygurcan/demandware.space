@@ -3,11 +3,12 @@ Demandware request tester
 
 ---
 
-![analytics](https://analytics.gokaygurcan.com/UA-55204660-5/gokaygurcan/demandware.space.svg?style=flat-square)
-![website](https://img.shields.io/website/https/demandware.space.svg?style=flat-square)
-![vulnerabilities](https://snyk.io/test/github/gokaygurcan/demandware.space/badge.svg?style=flat-square)
-![travis ci](https://img.shields.io/travis/gokaygurcan/demandware.space.svg?style=flat-square)
-![license](https://img.shields.io/github/license/gokaygurcan/demandware.space.svg?style=flat-square)
+[![analytics](https://analytics.gokaygurcan.com/UA-55204660-5/gokaygurcan/demandware.space.svg?style=flat-square)](https://demandware.space)
+[![website](https://img.shields.io/website/https/demandware.space.svg?style=flat-square)](https://demandware.space)
+[![vulnerabilities](https://snyk.io/test/github/gokaygurcan/demandware.space/badge.svg?style=flat-square)](https://snyk.io/test/github/gokaygurcan/demandware.space)
+[![travis ci](https://img.shields.io/travis/gokaygurcan/demandware.space.svg?style=flat-square)](https://travis-ci.org/gokaygurcan/demandware.space)
+[![code climate](https://img.shields.io/codeclimate/github/gokaygurcan/demandware.space.svg?style=flat-square)](https://codeclimate.com/github/gokaygurcan/demandware.space)
+[![license](https://img.shields.io/github/license/gokaygurcan/demandware.space.svg?style=flat-square)](https://github.com/gokaygurcan/demandware.space/blob/master/LICENSE)
 
 ## Example outputs
 
