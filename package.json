@@ -33,7 +33,7 @@
     "redis": "^2.6.2"
   },
   "devDependencies": {
-    "xo": "^0.17.0"
+    "xo": "^0.18.0"
   },
   "xo": {
     "space": 2,
